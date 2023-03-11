@@ -17,3 +17,5 @@ target/surefire-reports/com.burhan.atm.AppTest.txt
 target/surefire-reports/TEST-com.burhan.atm.AppTest.xml
 target/test-classes/com/burhan/atm/AppTest.class
 target/test-classes/com/burhan/examples/AppTest.class
+target/surefire-reports/com.burhan.examples.AppTest.txt
+target/surefire-reports/TEST-com.burhan.examples.AppTest.xml
