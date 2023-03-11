@@ -13,20 +13,22 @@ public class App {
   public static void main(String[] args) {
     Jedis jedis = new Jedis("localhost", 6379);
     AtmController atmController = new AtmController(jedis);
-    if (args[0].equals("login")) {
-      Account result;
-      try {
-        result = atmController.login(args[1]);
-        System.out.println("Hello, " + result.getUserName() + "!");
-        System.out.println("Your balance is $" + result.getAmountBalance());
-      } catch (Exception e) {
-        // TODO Auto-generated catch block
-        System.out.println(e.getMessage());
-      }
-    } else if(args[0].equals("logout")){
+    switch (args[0]) {
+      case "login":
+        Account result;
+        try {
+          result = atmController.login(args[1]);
+          System.out.println("Hello, " + result.getUserName() + "!");
+          System.out.println("Your balance is $" + result.getAmountBalance());
+        } catch (Exception e) {
+          System.out.println(e.getMessage());
+        }
+        break;
+      case "logout":
         System.out.println("Goodbye " + atmController.logout());
-    }else {
-      System.out.println("wrong arguments");
+        break;
+      default:
+        System.out.println("wrong arguments");
     }
   }
 }
