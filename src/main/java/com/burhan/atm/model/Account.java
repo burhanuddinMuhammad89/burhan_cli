@@ -8,6 +8,10 @@ public class Account {
 
   private Double amountBalance;
 
+  private Double debt;
+
+  private Double transferredBalance;
+
   public Long getId() {
     return this.id;
   }
@@ -30,5 +34,21 @@ public class Account {
 
   public void setAmountBalance(Double amountBalance) {
     this.amountBalance = amountBalance;
+  }
+
+  public Double getDebt() {
+    return this.debt;
+  }
+
+  public void setDebt(Double debt) {
+    this.debt = debt;
+  }
+
+  public Double getTransferredBalance() {
+    return this.transferredBalance;
+  }
+
+  public void setTransferredBalance(Double transferredBalance) {
+    this.transferredBalance = transferredBalance;
   }
 }

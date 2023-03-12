@@ -9,5 +9,9 @@ public interface AtmService {
 
   public String logout();
 
+  public String deposit(Double depo) throws Exception;
+
+  public Account transfer(Account acct) throws Exception;
+
   public String balance(Account acct);
 }
