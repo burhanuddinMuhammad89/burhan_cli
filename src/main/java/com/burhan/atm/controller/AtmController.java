@@ -1,8 +1,9 @@
 package com.burhan.atm.controller;
 
-import com.burhan.atm.Service.AtmService;
-import com.burhan.atm.Service.impl.AtmServiceImpl;
 import com.burhan.atm.model.Account;
+import com.burhan.atm.service.AtmService;
+import com.burhan.atm.service.impl.AtmServiceImpl;
+
 import redis.clients.jedis.Jedis;
 
 public class AtmController {
